@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color:rgb(10, 43, 70);
+        }
+        .container{
+            border-radius: 10px;
+            margin:100px;
+            margin-left: 200px;
+            width:300px;
+            height:150px;
+            background-color: aliceblue;
+        }
+        h3,h1
+        {
+            color:rgb(10, 43, 70);
+            text-align: center;
+            text-shadow: whitesmoke;
+        }#inc
+        {
+            margin-left:40px;
+            background-color: green;
+            border-radius: 5px;
+            color:white;
+        }
+         #res
+         {
+            background-color:rgb(10, 43, 70);
+            border-radius: 5px;
+            color:white;
+         }
+         #sub
+         {
+            background-color:red;
+            border-radius: 5px;
+            color:white;
+         }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+      <h3>COUNTER APP</h3>
+      <div id="count">
+         <h1 id="c">0</h1>
+      </div>
+      <button id="inc" onclick="addition()">Increment</button>
+      <button id="res" onclick="reset()">Reset</button>
+      <button id="sub" onclick="subtraction()">Decrement</button>
+    </div>
+    <script>
+        let count=document.getElementById("c");
+        let counter=0;
+        function addition()
+        {
+            counter++;
+            count.innerHTML=counter;
+        }
+        function subtraction()
+        {
+            counter--;
+            count.innerHTML=counter;
+        }
+        function reset()
+        {
+            counter=0;
+            count.innerHTML=counter;
+        }
+    </script>
+</body>
+</html>
